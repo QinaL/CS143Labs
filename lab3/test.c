@@ -25,18 +25,22 @@ int streq(char *s, char *t)
 Test(lab3, len0) 
 {
   cr_assert(len("")==0);
+  cr_assert(len("ABCD") == 4);
+  cr_assert(len("heyey!") == 6);
 }
 
 // repeat_char tests...
 Test(lab3, repeat_char0) 
 {
   cr_assert(streq(repeat_char('x',0),""));
+  cr_assert(streq(repeat_char('o', 3), "ooo"));
 }
 
 // count_char tests...
 Test(lab3, count_char0) 
 {
   cr_assert(count_char('a',"")==0);
+  cr_assert(count_char('c', "abecjcc")==3);
 }
 
 // locations_of tests...
