@@ -102,7 +102,7 @@ int main(int argc, char *argv[])
   printf("/*** int_new ***/\n");
   int *h = int_new(99);
   printf("h\t%p\n",h);
-  printf("h+1\t%p\n",h+1);
+  printf("h+1\t%p\n",h+1); //another pt is made, not freed
   printf("*h\t%d\n",*h);
   free(h);
 
@@ -129,6 +129,7 @@ int main(int argc, char *argv[])
    */
   for(i=0; i<argc; i++)
     printf("argv[%d]: %s\n",i,argv[i]);
+  // another way?
   char *tmp = malloc(100*sizeof(char));
   for(i=0; i<argc; i++){
     strcpy(tmp, argv[i]);
