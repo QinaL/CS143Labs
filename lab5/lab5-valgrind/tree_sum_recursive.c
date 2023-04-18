@@ -22,5 +22,11 @@ int main(int argc, char *argv[])
     tree_show(stdout,ts[i]);
     printf("\ntreesum: %d\n\n",treesum(ts[i]));
   }
+  tree_free(t0);
+  tree_free(t1);
+  tree_free(t2);
+  tree_free(t3);
+  tree_free(t4);
+  tree_free(t5);
   return 0;
 }

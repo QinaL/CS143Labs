@@ -20,9 +20,13 @@ tree *tree1(int n)
 
 void tree_free(tree *t)
 {
-  if (t!=NULL)
+  if (t!=NULL){
+    tree_free(t->lsub);
+    tree_free(t->rsub);
     free(t);
-}
+  }
+ }
+
 
 void tree_show(FILE *f, tree *t)
 {

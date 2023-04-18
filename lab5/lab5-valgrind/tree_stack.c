@@ -23,12 +23,14 @@ tree *pop(tree_stack *stk)
     exit(1);
   }
   tree *t = stk->trees->t;
+  tl_free(stk->trees);
   stk->trees = stk->trees->next;
   return t;
 }
 
 void tree_stack_free(tree_stack *stk)
 {
+  tl_free(stk->trees);
   free(stk);
 }
 
