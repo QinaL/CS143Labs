@@ -23,8 +23,9 @@ tree *pop(tree_stack *stk)
     exit(1);
   }
   tree *t = stk->trees->t;
-  tl_free(stk->trees);
+  tree_list* hold = stk->trees;
   stk->trees = stk->trees->next;
+  free(hold);
   return t;
 }
 
