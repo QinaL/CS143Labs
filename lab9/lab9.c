@@ -111,8 +111,10 @@ void shape_free(shape_t *s)
 // measure the area of the given shape
 double shape_area(shape_t *s)
 {
-  fprintf(stderr,"TODO: shape_area\n");
-  exit(1);
+  if (s->tag == CIRC){
+    return 
+  }
+
 }
 
 // measure the perimeter of the given shape
